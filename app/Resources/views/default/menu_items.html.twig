@@ -1,0 +1,21 @@
+<ul class="nav navbar-nav">
+    <li class="first_menu">
+        <a href="{{ path('homepage') }}">Fonte verde</a>
+    </li>
+    {% for menu_item in menu %}
+        <li {% if menu_item["children"] is defined and menu_item["children"] is not null and menu_item["children"] | length > 0 %}class="dropdown"{% endif %}>
+            <a href="{{ path('menu_show', {menu_id: menu_item["item"].getId()}) }}"
+               {% if menu_item["children"] is defined and menu_item["children"] is not null and menu_item["children"] | length > 0 %}class="dropdown-toggle" data-toggle="dropdown"{% endif %}
+            >{{ menu_item["item"].getTitle() }}</a>
+            {% if menu_item["children"] is defined and menu_item["children"] is not null and menu_item["children"] | length > 0 %}
+                <ul class="dropdown-menu">
+                    {% for children in menu_item["children"] %}
+                        <li>
+                            <a href="{{ path('menu_show', {menu_id: children.getId()}) }}">{{ children.getTitle() }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

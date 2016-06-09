@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block main_picture %}
+    {% if content.getFileFullPath() %}
+        <div style="position: relative;">
+            {% if content.getTitle() == 'Babaqua' %}
+                <a target="_blank" class="fb_logo" href="https://www.facebook.com/babaqua.asvanyviz/?fref=ts"><img src="{{ asset('images/fb_logo.png') }}"></a>
+            {% else %}
+                <a target="_blank" class="fb_logo" href="https://www.facebook.com/FonteVerdeasvanyviz/?fref=ts"><img src="{{ asset('images/fb_logo.png') }}"></a>
+            {% endif %}
+            <img src="{{ asset(content.getFileFullPath()) }}" class="img-responsive margin-center">
+        </div>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% if content.getMainContent() is defined and content.getMainContent() | striptags != '' %}
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text main_text">
+                    {{ content.getMainContent() | raw }}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="row">
+        <div class="col-md-4">
+            <div class="text">
+                {{ content.getContent1() | raw }}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="text">
+                {{ content.getContent2() | raw }}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="text">
+                {{ content.getContent3() | raw }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}{% endblock %}

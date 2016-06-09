@@ -1,0 +1,472 @@
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('fonts/MyriadPro-Regular.eot');
+    src: url('fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/MyriadPro-Regular.woff2') format('woff2'),
+    url('fonts/MyriadPro-Regular.woff') format('woff'),
+    url('fonts/MyriadPro-Regular.ttf') format('truetype'),
+    url('fonts/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('fonts/MyriadPro-Bold.eot');
+    src: url('fonts/MyriadPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/MyriadPro-Bold.woff2') format('woff2'),
+    url('fonts/MyriadPro-Bold.woff') format('woff'),
+    url('fonts/MyriadPro-Bold.ttf') format('truetype'),
+    url('fonts/MyriadPro-Bold.svg#MyriadPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro Cond';
+    src: url('fonts/MyriadPro-Cond.eot');
+    src: url('fonts/MyriadPro-Cond.eot?#iefix') format('embedded-opentype'),
+    url('fonts/MyriadPro-Cond.woff2') format('woff2'),
+    url('fonts/MyriadPro-Cond.woff') format('woff'),
+    url('fonts/MyriadPro-Cond.ttf') format('truetype'),
+    url('fonts/MyriadPro-Cond.svg#MyriadPro-Cond') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Trajan Pro';
+    src: url('fonts/TrajanPro-Regular.eot');
+    src: url('fonts/TrajanPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TrajanPro-Regular.woff2') format('woff2'),
+    url('fonts/TrajanPro-Regular.woff') format('woff'),
+    url('fonts/TrajanPro-Regular.ttf') format('truetype'),
+    url('fonts/TrajanPro-Regular.svg#TrajanPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Trajan Pro';
+    src: url('fonts/TrajanPro-Bold.eot');
+    src: url('fonts/TrajanPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TrajanPro-Bold.woff2') format('woff2'),
+    url('fonts/TrajanPro-Bold.woff') format('woff'),
+    url('fonts/TrajanPro-Bold.ttf') format('truetype'),
+    url('fonts/TrajanPro-Bold.svg#TrajanPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    background: #f4fbfe;
+    color: #253d89;
+    font-family: 'Myriad Pro', sans-serif;
+}
+
+.wrapper {
+    padding-bottom: 50px;
+}
+
+.container {
+    max-width: 1200px;
+}
+.margin-center { margin: 0 auto; }
+
+.header {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    font-size: 23px;
+    font-family: 'Myriad Pro Cond', sans-serif;
+    z-index: 100;
+}
+
+.fb_logo {
+    position: absolute;
+    top: 70px;
+    left: 30px;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.dropdown-menu > li > a {
+    color: #09286e;
+    text-transform: none;
+    position: relative;
+    padding-left: 35px;
+    font-size: 18px;
+}
+
+.dropdown-menu > li > a:first-letter {
+
+}
+
+.dropdown-menu > li > a:before {
+    content: url('../images/menu_bullet.png');
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+.dropdown-menu > li > a:hover {
+    color: #e2017b;
+    background: none;
+}
+
+.dropdown-menu > li > a:hover:before {
+    content: url('../images/menu_bullet_hover.png');
+}
+
+.nav > li:hover, .nav > li:focus, .nav > li:hover > a, .nav > li:hover > a {
+    background: #e2017b;
+    color: #fff;
+}
+
+.navbar-nav {
+    display: table;
+    width: 100%;
+}
+
+.navbar-nav > li {
+    display: table-cell;
+    float: none;
+    text-align: center;
+}
+
+.navbar-nav > li > a {
+    padding: 10px 20px !important;
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+}
+
+.navbar-toggle {
+    margin-right: 0;
+    margin-top: 11px;
+    margin-bottom: 3px;
+}
+
+.navbar-toggle .icon-bar {
+    background: #ffffff;
+    width: 32px;
+}
+
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 6px;
+}
+
+.page_title {
+    text-transform: uppercase;
+    text-align: center;
+    color: #253d89;
+    font-size: 28px;
+    /*position: absolute;
+    bottom: 30px;*/
+    width: 100%;
+    font-family: 'Trajan Pro', sans-serif;
+    padding: 20px 0 50px;
+}
+
+.text {
+    font-size: 22px;
+    line-height: 33px;
+    font-family: 'Myriad Pro Cond', sans-serif;
+}
+.text img {
+    /*padding: 15px 0;*/
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.main_text {
+    padding: 30px 0;
+    font-family: 'Trajan Pro', sans-serif;
+    font-size: 25px;
+}
+
+.footer {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar {
+    border: none;
+    min-height: 40px;
+}
+
+.first_menu {
+    color: #ffffff;
+    background: #263d89;
+}
+
+.navbar-nav > li.first_menu > a {
+    color: #ffffff;
+    font-family: 'Trajan Pro', sans-serif;
+}
+
+.head_title_mobile {
+    position: relative;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    padding-left: 70px;
+    font-family: 'Trajan Pro', sans-serif;
+    z-index: 2;
+}
+
+.head_title_mobile a, .head_title_mobile a:hover, .head_title_mobile a:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.fv_icon_mobile {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+@media screen and (min-width: 0px) {
+
+    .col-md-4 {
+        margin-bottom: 15px;
+    }
+
+    .menu {
+        height: 60px;
+        background: #253d89;
+    }
+
+    .fb_logo {
+        top: 70px;
+        left: 14px;
+    }
+    
+    .fb_logo img {
+        width: 40px;
+    }
+
+    .head_title_mobile {
+        display: block;
+        font-size: 15px;
+    }
+
+    .navbar-nav > li.first_menu {
+        display: none;
+    }
+
+    .navbar-collapse.collapse {
+        background: #253d89;
+        display: none !important;
+        clear: both;
+        max-width: 220px;
+        float: right;
+    }
+
+    .navbar-collapse.collapsing {
+        background: #253d89;
+        clear: both;
+        max-width: 220px;
+        float: right;
+    }
+
+    .navbar-nav > li > .dropdown-menu {
+        margin-top: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        display: block;
+        position: static;
+        float: none;
+        box-shadow: none;
+        background: #253d89;
+        text-align: left;
+    }
+
+    .collapse.in {
+        display: block !important;
+        max-width: 220px;
+        float: right;
+    }
+
+    .navbar-toggle {
+        display: block !important;
+    }
+    .navbar-header {
+        float: right !important;
+    }
+    
+    .navbar-nav {
+        margin: 0;
+    }
+
+    .navbar-nav > li {
+        display: block;
+        text-align: left;
+    }
+
+    .navbar-nav > li.first_menu > a {
+        padding: 10px 35px !important;
+        font-size: 18px;
+    }
+
+    .navbar-nav > li > a {
+        color: #ffffff;
+    }
+
+    .dropdown-menu > li > a {
+        color: #ffffff;
+        white-space: normal;
+    }
+
+    .dropdown-menu > li > a:before {
+       display: none;
+    }
+
+    .nav > li:hover, .nav > li:focus, .nav > li:hover > a, .nav > li:hover > a {
+        background: #e2017b;
+        color: #fff;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .head_title_mobile {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .fb_logo {
+        top: 70px;
+        left: 30px;
+    }
+
+    .fb_logo img {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .col-md-4 {
+        margin-bottom: 0;
+    }
+
+    .menu {
+        height: 40px;
+        background: rgba(255,255,255,0.9);
+    }
+
+    .head_title_mobile {
+        display: none;
+    }
+
+    .navbar-nav > li.first_menu {
+        display: table-cell;
+    }
+
+    .navbar-toggle {
+        display: none !important;
+    }
+
+    .navbar-collapse.collapse {
+        background: rgba(255,255,255,0.9);
+        display: block !important;
+        margin-top: 0;
+        max-width: inherit;
+        float: none;
+    }
+
+    .navbar-nav {
+        margin: 0;
+    }
+
+    .navbar-nav > li {
+        display: table-cell;
+        font-size: 21px;
+        text-align: center;
+    }
+
+    .navbar-nav > li.first_menu > a {
+        color: #ffffff;
+        font-family: 'Trajan Pro', sans-serif;
+        padding: 10px 15px !important;
+    }
+
+    .navbar-nav > li > .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 160px;
+        padding: 5px 0;
+        list-style: none;
+        font-size: 14px;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.9);
+        margin-top: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+    }
+
+    .navbar-nav > li > a {
+        color: #337ab7;
+    }
+
+    .dropdown-menu > li > a {
+        color: #09286e;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu > li > a:before {
+        display: block;
+    }
+
+    .nav > li:hover, .nav > li:focus, .nav > li:hover > a, .nav > li:hover > a {
+        background: #e2017b;
+        color: #fff;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar-toggle {
+        display: none !important;
+    }
+
+    .navbar-collapse.collapse {
+        display: block !important;
+    }
+
+    .navbar-nav > li {
+        font-size: 23px;
+    }
+
+    .navbar-nav > li.first_menu > a {
+        color: #ffffff;
+        font-family: 'Trajan Pro', sans-serif;
+        padding: 10px 60px !important;
+        font-size: inherit;
+    }
+}

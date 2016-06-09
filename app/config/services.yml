@@ -1,0 +1,21 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+    admin.article:
+        class: AppBundle\Admin\ArticleAdmin
+        arguments: [~, AppBundle\Entity\Article, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Article }
+    admin.content:
+        class: AppBundle\Admin\ContentAdmin
+        arguments: [~, AppBundle\Entity\Content, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Content }
+    admin.menu:
+        class: AppBundle\Admin\MenuAdmin
+        arguments: [~, AppBundle\Entity\Menu, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Menu }

@@ -1,0 +1,37 @@
+{% extends 'SonataAdminBundle:CRUD:base_edit.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
+    <script type="text/javascript">
+        $(function() {
+	    CKEDITOR.config.removeButtons = '';
+	    
+            CKEDITOR.config.coreStyles_subscript = {
+                element: 'span',
+                attributes: { 'class': 'Subscript' },
+                overrides: 'sub'
+            };
+
+            CKEDITOR.config.coreStyles_superscript = {
+                element: 'span',
+                attributes: { 'class': 'Superscript' },
+                overrides: 'sup'
+            };
+
+            CKEDITOR.config.extraPlugins = 'justify,tabletools,colorbutton,panelbutton,floatpanel,dialogadvtab,image';
+
+            CKEDITOR.stylesSet.add( 'my_styles', [
+                { name: 'Myriad', element: 'span', styles: { 'font-family': 'Myriad Pro' } },
+                { name: 'Trajan', element: 'span', styles: { 'font-family': 'Trajan Pro' } }
+            ]);
+
+            CKEDITOR.config.stylesSet = 'my_styles';
+
+            CKEDITOR.config.extraAllowedContent = '*{*}';
+
+            CKEDITOR.config.filebrowserImageBrowseUrl = '/web/js/kcfinder/browse.php?opener=ckeditor&type=images';
+            CKEDITOR.config.filebrowserImageUploadUrl = '/web/js/kcfinder/upload.php?opener=ckeditor&type=images';
+        });
+    </script>
+{% endblock %}

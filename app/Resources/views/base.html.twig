@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <title>{% block title %}Fonteverde{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-theme.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/stylesheets.css') }}" />
+
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="header">
+                {% include 'default/menu.html.twig' %}
+                {% block main_picture %}
+                    <div style="position: relative;">
+                        <a target="_blank" class="fb_logo" href=" https://www.facebook.com/FonteVerdeasvanyviz"><img src="{{ asset('images/fb_logo.png') }}"></a>
+                        <img src="{{ asset('images/main_pic.jpg') }}" class="img-responsive margin-center">
+                        <div class="page_title">
+                            Az egészség és a harmónia sosem megy ki a divatból
+                        </div>
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+        {% block body %}{% endblock %}
+        {% block footer %}
+            <div class="footer">
+                <img src="{{ asset('images/footer_pic.png') }}">
+            </div>
+        {% endblock %}
+    </div>
+    <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
+    {% block javascripts %}{% endblock %}
+</body>
+</html>
