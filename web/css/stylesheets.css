@@ -251,13 +251,17 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
         margin-bottom: 15px;
     }
 
+    .header {
+        padding-top: 60px;
+    }
+
     .menu {
         height: 60px;
         background: #253d89;
     }
 
     .fb_logo {
-        top: 70px;
+        top: 15px;
         left: 14px;
     }
     
@@ -355,7 +359,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 
 @media screen and (min-width: 768px) {
     .fb_logo {
-        top: 70px;
+        top: 30px;
         left: 30px;
     }
 
@@ -365,6 +369,15 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 
 @media screen and (min-width: 992px) {
+
+    .header {
+        padding-top: 0;
+    }
+
+    .fb_logo {
+        top: 70px;
+        left: 30px;
+    }
 
     .col-md-4 {
         margin-bottom: 0;
